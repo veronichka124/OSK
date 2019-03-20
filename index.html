@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="OSK" content="Algoritmu animācija">
+  <meta name="author" content="SitePoint">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css?v=1.0">
+
+</head>
+
+<body>
+	<div id="add_process">
+		<!-- SELECT -->
+		<span>Izvēlēties algoritmu:</span>
+		<select id="select">
+			<option id="fcfs" value="FCFS">FCFS</option>
+			<option id="sjf" value="SJF">SJF</option>
+		</select>
+		<!-- FORMA -->
+		<form id="form">
+		Process: <input type="text" id="process" id="process" name="process">
+		Procesa ierašanās laiks: <input type="text" id="time" name="time" disabled>
+		Spurta laiks: <input type="number" id="spurta" name="spurta">		
+		</form>
+		<!-- BUTTONS -->
+		<button id="submit" type="button">Pievienot</button>
+		<button id="clear" type="button">Dzēst no tabulas</button>
+	</div>
+	<!-- TABULA -->
+	<div >
+		<table id="table">
+			<thead>
+				<tr>
+					<th>Process</th>
+					<th>Procesa ierašanās laiks</th>
+					<th>Spurta laiks</th>
+				</tr>
+			</thead>
+			<tbody></tbody>			
+		</table>
+	</div>
+	<!-- ANIMĀCIJA -->
+	<button onclick="animateButton" id="animate" type="button">Animēt</button>
+	<div>
+		<table id="table_animation" hidden>
+			<tr id="result"></tr>
+		</table>
+	</div>
+	<p id="output"></p>
+	
+  <script src="scripts.js"></script>
+
+</body>
+</html>

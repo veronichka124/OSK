@@ -1,0 +1,19 @@
+table, td {
+	border: 1px solid black;
+}
+
+table {
+	width: 50%;
+}
+
+form {
+	display: grid;
+}
+
+select {
+	display: inherit;
+}
+
+input, select, button {
+	margin: 10px 0;
+}
