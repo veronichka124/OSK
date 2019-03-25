@@ -18,14 +18,16 @@
 		<!-- SELECT -->
 		<span>Izvēlēties algoritmu:</span>
 		<select id="select">
-			<option id="fcfs" value="FCFS">FCFS</option>
-			<option id="sjf" value="SJF">SJF</option>
+			<option id="fcfs" value="fcfs">FCFS</option>
+			<option id="sjf" value="sjf">SJF</option>
+			<option id="priority" value="priority">Priority scheduling</option>
+			<option id="robin" value="robin">Round Robin</option>
 		</select>
 		<!-- FORMA -->
 		<form id="form">
 		Process: <input type="text" id="process" id="process" name="process">
-		Procesa ierašanās laiks: <input type="text" id="time" name="time" disabled>
-		Spurta laiks: <input type="number" id="spurta" name="spurta">		
+		Procesa ierašanās laiks: <input type="text" id="arrival" name="arrival" >
+		Spurta laiks: <input type="number" id="time" name="time">		
 		</form>
 		<!-- BUTTONS -->
 		<button id="submit" type="button">Pievienot</button>
@@ -33,7 +35,7 @@
 	</div>
 	<!-- TABULA -->
 	<div >
-		<table id="table">
+		<table id="table_inputs">
 			<thead>
 				<tr>
 					<th>Process</th>
@@ -49,9 +51,10 @@
 	<div>
 		<table id="table_animation" hidden>
 			<tr id="result"></tr>
+			<tr id="result_time"></tr>
 		</table>
 	</div>
-	<p id="output"></p>
+	<div id="timer"></div>
 	
   <script src="scripts.js"></script>
 

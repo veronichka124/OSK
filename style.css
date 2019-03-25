@@ -1,9 +1,14 @@
-table, td {
+table, th, td {
 	border: 1px solid black;
 }
 
 table {
+	border-collapse: collapse;
 	width: 50%;
+}
+
+table th {
+	border: 1px solid black;
 }
 
 form {
@@ -16,4 +21,8 @@ select {
 
 input, select, button {
 	margin: 10px 0;
+}
+
+#result {
+	text-align: center;
 }
