@@ -25,36 +25,39 @@
 		</select>
 		<!-- FORMA -->
 		<form id="form">
-		Process: <input type="text" id="process" id="process" name="process">
+		<span>Process<strong style="color: red;">*</strong>:<input type="text" id="process" name="process"></span> 
 		Procesa ierašanās laiks: <input type="text" id="arrival" name="arrival" >
-		Spurta laiks: <input type="number" id="time" name="time">		
+		<span>Spurta laiks<strong style="color: red;">*</strong>:<input type="number" id="time" name="time">	</span>
 		</form>
 		<!-- BUTTONS -->
 		<button id="submit" type="button">Pievienot</button>
 		<button id="clear" type="button">Dzēst no tabulas</button>
 	</div>
 	<!-- TABULA -->
-	<div >
+	<div>		
 		<table id="table_inputs">
 			<thead>
 				<tr>
 					<th>Process</th>
 					<th>Procesa ierašanās laiks</th>
 					<th>Spurta laiks</th>
+					<th id="th_priority">Prioritāte</th>
 				</tr>
 			</thead>
 			<tbody></tbody>			
 		</table>
+		<span id="quantum_input">Laika kvants<strong style="color: red;">*</strong>: <input type="number" id="quantum" name="quantum" ></span>
 	</div>
 	<!-- ANIMĀCIJA -->
-	<button onclick="animateButton" id="animate" type="button">Animēt</button>
+	<button id="animate" type="button">Animēt</button>
 	<div>
 		<table id="table_animation" hidden>
 			<tr id="result"></tr>
 			<tr id="result_time"></tr>
 		</table>
 	</div>
-	<div id="timer"></div>
+	<div id="moving_shape"></div>
+	<div id="timer"><p>Total time: <strong></strong> sec</p></div>
 	
   <script src="scripts.js"></script>
 
