@@ -34,6 +34,6 @@ input, select, button {
 #moving_shape {
 	background-color: white;
 	position: absolute;
-	width: 50%;
+	width: 100%;
 	height: 72px;
 }
