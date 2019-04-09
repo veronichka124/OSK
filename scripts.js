@@ -55,7 +55,7 @@ function submitForm() {
 		cell2.innerHTML = arrival;
 		cell3.innerHTML = time;	
 		var cell4 = row.insertCell(3);
-		cell4.innerHTML = '<input type="number" name="' + process + '">';	
+		cell4.innerHTML = '<input type="number" min="1" name="' + process + '">';	
 		cell4.setAttribute("class", "priority_cell");
 
 		if (selected_algorithm != "priority") {			
