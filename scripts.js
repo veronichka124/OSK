@@ -133,7 +133,6 @@ function submitForm() {
 		});					
 	}
 	$("#table_animation").html('<tr style="height: 50px; font-weight: bold;">'+td_process+'</tr>'+'<tr style="height: 20px;">'+td_time+'</tr>');		
-	$("#timer").html(' <p>Total time: <strong>' + totalTime + '</strong> sec</p>');	
 
 	timer(totalTime);
 	movingShape();
