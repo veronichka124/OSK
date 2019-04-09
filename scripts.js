@@ -117,9 +117,16 @@ function submitForm() {
 	while(!stop_process) {
 		stop_process = true;
 		array.forEach(function(item,index,array) {
-			if (item.time > 0) {
-				td_process += '<td style="background-color: #dddddd; width: '+ (item.time > quantum ? quantum : item.time) * 20 +'px;">'+ item.process +'</td>';
-				td_time += '<td style="width: '+ (item.time > quantum ? quantum : item.time) * 20 +'px;">'+ (item.time > quantum ? quantum : item.time) +'</td>';		
+			if (parseInt(item.time) > 0) {
+
+				console.log("time: " + item.time);
+				console.log("quantum: " + quantum);
+				if(parseInt(item.time) > quantum) {
+					console.log("time is bigger");
+				} else console.log("time is less");
+				
+				td_process += '<td style="background-color: #dddddd; width: '+ (parseInt(item.time) > quantum ? quantum : parseInt(item.time)) * 20 +'px;">'+ item.process +'</td>';
+				td_time += '<td style="width: '+ (parseInt(item.time) > quantum ? quantum : parseInt(item.time)) * 20 +'px;">'+ (parseInt(item.time) > quantum ? quantum : parseInt(item.time)) +'</td>';		
 				item.time -= quantum;
 				stop_process = false;			
 			}
