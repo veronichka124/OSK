@@ -118,7 +118,7 @@ function submitForm() {
 		stop_process = true;
 		array.forEach(function(item,index,array) {
 			if (item.time > 0) {
-				td_process += '<td style="width: '+ (item.time > quantum ? quantum : item.time) * 20 +'px;">'+ item.process +'</td>';
+				td_process += '<td style="background-color: #dddddd; width: '+ (item.time > quantum ? quantum : item.time) * 20 +'px;">'+ item.process +'</td>';
 				td_time += '<td style="width: '+ (item.time > quantum ? quantum : item.time) * 20 +'px;">'+ (item.time > quantum ? quantum : item.time) +'</td>';		
 				item.time -= quantum;
 				stop_process = false;			
