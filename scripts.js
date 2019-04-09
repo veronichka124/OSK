@@ -188,10 +188,11 @@ function movingShape() {
 	var left_param = table_param.left;
 	$("#moving_shape").css("top",table_param.top);
 	$("#moving_shape").css("left","0px");
-
+	table_width = parseInt(table_width);
+	
 	var animation = setInterval(frame, 10);
 	  function frame() {
-	    if ((left_param - 10) == parseInt(table_width)) {
+	    if ((left_param - 10) == table_width) {
 	      clearInterval(animation);
 	    } else {
 	      left_param++; 
