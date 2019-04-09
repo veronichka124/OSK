@@ -191,7 +191,7 @@ function movingShape() {
 
 	var animation = setInterval(frame, 10);
 	  function frame() {
-	    if ((left_param - 10 + "px") == table_width) {
+	    if ((left_param - 10 + "px") >= table_width) {
 	      clearInterval(animation);
 	    } else {
 	      left_param++; 
